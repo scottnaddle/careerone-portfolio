@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+# Careerone Portfolio Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an additional feature for the Careerone Platform (https://careerone.gov.lk/), Sri Lanka's national career guidance platform. The feature enables registered students to manage their personal portfolios directly within the platform.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Profile Management**: Edit and manage personal information including contact details, profile photo, and career summary
+- **Education & Training**: Record academic qualifications, certifications, and completed courses
+- **Experience & Skills**: Document work experience, technical skills, and language proficiency
+- **CV Generator**: Generate and download customized CVs based on the entered information
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 18 with TypeScript
+- React Router for navigation
+- Tailwind CSS for styling
+- Webpack for bundling
+- jsPDF and html2canvas for PDF generation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 16+ and npm installed
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+   ```
+   git clone <repository-url>
+   cd careerone-portfolio
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server
+   ```
+   npm start
+   ```
+   The application will open in your default browser at http://localhost:3000.
 
-### `npm run eject`
+### Building for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To create a production build:
+```
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The built files will be in the `dist` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Integration with Careerone Platform
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This portfolio feature is designed to be integrated into the existing Careerone Platform. The integration process will involve:
 
-## Learn More
+1. Adding the portfolio section to the student dashboard
+2. Connecting the portfolio to the existing user authentication system
+3. Linking course completion data from the platform to the portfolio
+4. Enabling admin access to student CVs with permission
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+careerone-portfolio/
+├── src/                    # Source files
+│   ├── components/         # React components
+│   │   ├── common/         # Shared components like Header and Footer
+│   │   ├── profile/        # Profile-related components
+│   │   ├── education/      # Education and certification components
+│   │   ├── experience/     # Experience and skills components
+│   │   └── cvgenerator/    # CV generation components
+│   ├── pages/              # Page components
+│   ├── services/           # API services
+│   ├── styles/             # CSS styles
+│   ├── utils/              # Utility functions
+│   ├── assets/             # Static assets
+│   ├── App.tsx             # Main app component
+│   └── index.tsx           # Entry point
+├── public/                 # Public assets
+├── dist/                   # Production build (generated)
+├── webpack.config.js       # Webpack configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies and scripts
+```
+
+## Future Enhancements
+
+- Multi-language support for Sinhala and Tamil
+- AI integration for improving CV content
+- Integration with job matching features
+- Analytics for tracking CV performance
+
+## License
+
+This project is proprietary and owned by Careerone.
+
+## Contact
+
+For any queries regarding this feature, please contact the Careerone development team.
